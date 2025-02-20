@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -101,6 +101,32 @@ p {
 }
 strong {
   font-family: 'Larry-Bold', sans-serif;
+}
+
+.stripe svg {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0px);
+}
+
+@media screen and (max-width: 1500px){
+
+  .stripe svg {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 25%) scale(.5);
+  }
+
+  .light .stripe svg path {
+      stroke-width: 2.2px;
+  }
+  
+  .dark .stripe svg path {
+      stroke-width: 2.2px;
+  }
+  
 }
 body {
   color: var(--foreground);

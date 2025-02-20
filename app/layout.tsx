@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Footer from "./components/footer";
+import Header from "./components/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "./provider";
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
+          <Header></Header>
           {children}
           <Footer />
         </Provider>
