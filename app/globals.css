@@ -45,7 +45,7 @@
   background: rgb(2, 154, 160);
   color: #000;
 }
-.social-ico{
+.social-ico {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -84,23 +84,45 @@ p.small {
 }
 @media screen and (max-width: 1200px) {
   p.small {
-      opacity: .7;
+    opacity: 0.7;
   }
 }
-@media screen and (max-width: 540px){
-  h1              {font-size: 30px; font-size: clamp(30px, 8vw, 40px); margin-bottom: 4vw;}
-  h1.big          {font-size: 40px; font-size: clamp(40px, 10vw, 50px);}
-  h2 				{font-size: 26px;}
-  h2.big          {font-size: 30px; font-size: 7vw;}
-  h4          	{font-size: 19px;}
-  p           	{font-size: 16px;}
-  p.small         {font-size: 12.5px;}
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 30px;
+    font-size: clamp(30px, 8vw, 40px);
+    margin-bottom: 4vw;
+  }
+  h1.big {
+    font-size: 40px;
+    font-size: clamp(40px, 10vw, 50px);
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h2.big {
+    font-size: 30px;
+    font-size: 7vw;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  p {
+    font-size: 16px;
+  }
+  p.small {
+    font-size: 12.5px;
+  }
 }
 p {
   font-size: clamp(16px, 1.1vw, 18px);
 }
 strong {
-  font-family: 'Larry-Bold', sans-serif;
+  font-family: "Larry-Bold", sans-serif;
+}
+
+.light .stripe svg path {
+  fill: #ffff;
 }
 
 .stripe svg {
@@ -110,23 +132,21 @@ strong {
   transform: translate(-50%, 0px);
 }
 
-@media screen and (max-width: 1500px){
-
+@media screen and (max-width: 1500px) {
   .stripe svg {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translate(-50%, 25%) scale(.5);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 25%) scale(0.5);
   }
 
   .light .stripe svg path {
-      stroke-width: 2.2px;
+    stroke-width: 2.2px;
   }
-  
+
   .dark .stripe svg path {
-      stroke-width: 2.2px;
+    stroke-width: 2.2px;
   }
-  
 }
 body {
   color: var(--foreground);
@@ -436,14 +456,75 @@ main#home .header-image.mobile {
 }
 
 .social-sticker {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 130px;
-	display: block;
-	transform: translate(15%, -30%) rotate(5deg) scale(1.7);
-	opacity: 0;
-	pointer-events: none;
-	transition: all .2s cubic-bezier(0.83, 0, 0.13, 1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+  display: block;
+  transform: translate(15%, -30%) rotate(5deg) scale(1.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.83, 0, 0.13, 1);
 }
 
+/**Navigation Header **/
+
+.nav {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: #0000;
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  inset: 0% 0% auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.nav-links, .button-link {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+button {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 4px 15px;
+  font-family: "Larry-SemiBold", sans-serif;
+  font-size: clamp(10px, 1vw, 13px);
+  line-height: 1;
+  transition: all 0.45s ease-in-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup button{
+  border: 1px solid currentColor;
+}
+
+.button-link button:hover{
+  background-color: rgba(0, 253, 253, 0.123);
+}

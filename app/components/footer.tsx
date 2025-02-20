@@ -12,7 +12,6 @@ const Footer = () => {
           <path
             stroke="#383838"
             strokeWidth="1"
-            fill="#000"
             d="M1.344 36.64L37 .985 72.656 36.64"
             fillRule="evenodd"
           ></path>
