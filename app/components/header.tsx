@@ -4,10 +4,14 @@ import Image from "next/image";
 import React from "react";
 import Palawonder from "@/public/Palawonder.svg";
 import Link from "next/link";
+import ToggleSwitch from "./toggleSwitch";
 
 const Header = () => {
   return (
-    <header className="nav">
+    <header className="nav container nav-container">
+      <div className="toggle-switch flex items-center gap-3">
+        <ToggleSwitch />
+      </div>
       <div className="container logo-container justify-between flex cursor-pointer">
         <div className="flex justify-center items-center select-none gap-9">
           <Image
@@ -29,7 +33,6 @@ const Header = () => {
             </li>
           </ul>
         </div>
-
         <div className="flex flex-row gap-5 ">
           <Link className="button-link" href="/login">
             <button>Login</button>

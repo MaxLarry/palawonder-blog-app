@@ -10,11 +10,9 @@
   --primary-text-color-light: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 @font-face {
@@ -489,11 +487,18 @@ main#home .header-image.mobile {
   gap: 2rem;
 }
 
-.nav-links, .button-link {
+.nav-links,
+.button-link {
   display: flex;
   align-items: center;
 }
-
+.container.nav-container {
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
 .container {
   width: 100%;
   max-width: 1920px;
@@ -521,10 +526,29 @@ button {
   overflow: hidden;
 }
 
-.signup button{
+.signup button {
   border: 1px solid currentColor;
 }
 
-.button-link button:hover{
+.button-link button:hover {
   background-color: rgba(0, 253, 253, 0.123);
+}
+
+.toggle-switch {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: Roslindale, Times New Roman, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  left: auto;
+  right: auto;
 }
