@@ -8,7 +8,7 @@ import ToggleSwitch from "./toggleSwitch";
 
 const Header = () => {
   return (
-    <header className="nav container nav-container">
+    <header className="nav">
       <div className="toggle-switch flex items-center gap-3">
         <ToggleSwitch />
       </div>
@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex justify-center items-center select-none gap-9">
           <Image
             src={Palawonder}
-            width={50}
+            width={40}
             height={60}
             alt="palawonder"
           ></Image>
@@ -33,13 +33,24 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row gap-5 ">
-          <Link className="button-link" href="/login">
-            <button>Login</button>
+        <div className="flex flex-row gap-5 items-center">
+          <Link className=" button button-link" href="/login">
+            Login
           </Link>
-          <Link className="button-link signup" href="/login">
-            <button>Sign up</button>
+          <Link className=" button button-link prim hidden" href="/login">
+            Sign up
           </Link>
+
+          <div
+            className=""
+            aria-label="menu"
+            role="button"
+          >
+            <div className="button mobile-button prim ">
+              <div className="mobile-button-text">Menu</div>
+              <div className="mobile-button-text">Close</div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

@@ -156,6 +156,7 @@ body {
   -webkit-font-smoothing: antialiased;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .stripe {
@@ -475,6 +476,9 @@ main#home .header-image.mobile {
   width: 100%;
   height: 64px;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inset: 0% 0% auto;
 }
 
@@ -487,18 +491,6 @@ main#home .header-image.mobile {
   gap: 2rem;
 }
 
-.nav-links,
-.button-link {
-  display: flex;
-  align-items: center;
-}
-.container.nav-container {
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
 .container {
   width: 100%;
   max-width: 1920px;
@@ -509,7 +501,7 @@ main#home .header-image.mobile {
   padding-right: 64px;
 }
 
-button {
+.button {
   text-align: center;
   text-transform: uppercase;
   border-radius: 24px;
@@ -525,12 +517,16 @@ button {
   position: relative;
   overflow: hidden;
 }
+.mobile-button {
+  display: none;
+}
 
-.signup button {
+.prim {
   border: 1px solid currentColor;
 }
 
-.button-link button:hover {
+.button-link:hover,
+.mobile-button:hover {
   background-color: rgba(0, 253, 253, 0.123);
 }
 
@@ -551,4 +547,40 @@ button {
   display: flex;
   left: auto;
   right: auto;
+}
+
+.button.mobile-button {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile-button-text {
+  flex-wrap: nowrap;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .button-link {
+    display: none;
+  }
+  .mobile-button {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+  }
 }
