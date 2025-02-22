@@ -5,7 +5,7 @@ export default function Hello(){
 
     return(
         <div>
-            <h1>Unang commit sa bagong application na gagawin.</h1>
+            <h1></h1>
         </div>
     )
 }

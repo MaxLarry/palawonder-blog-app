@@ -8,7 +8,7 @@ import ToggleSwitch from "./toggleSwitch";
 
 const Header = () => {
   return (
-    <header className="nav">
+    <div className="nav">
       <div className="toggle-switch flex items-center gap-3">
         <ToggleSwitch />
       </div>
@@ -53,7 +53,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

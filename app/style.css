@@ -1,0 +1,26 @@
+
+
+
+header .container{
+    /* height: 90vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header .container h1{
+    font-family: "John-Regular", sans-serif;
+    line-height: 0.8em;
+    margin-bottom: 2rem;
+}
+
+header .container p{
+    font-family: "Syne-Regular", sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* header .container {
+    padding: 90px 0;
+} */

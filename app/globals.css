@@ -1,6 +1,11 @@
+@import "./style.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 :root {
   --background: #ffffff;
@@ -34,6 +39,16 @@
 @font-face {
   font-family: Larry-ExtraBold;
   src: url("./fonts/manrope/Manrope-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Syne-Regular;
+  src: url("./fonts/syne/Syne-Regular.ttf");
+}
+
+@font-face {
+  font-family: John-Regular;
+  src: url("./fonts/polysans/PolySans-Median.ttf");
 }
 /*This will able to hide the scroll bar*/
 ::-webkit-scrollbar {
@@ -156,7 +171,6 @@ body {
   -webkit-font-smoothing: antialiased;
   top: 0;
   left: 0;
-  overflow: hidden;
 }
 
 .stripe {
