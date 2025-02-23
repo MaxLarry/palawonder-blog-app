@@ -8,8 +8,8 @@ export default function Home() {
     <>
       <header className="home-intro">
         <div className="container overflow-hidden">
-          <div className="flex flex-col justify-center items-center over">
-            <p>Your Gateway to Palawan’s Hidden Wonders</p>
+          <div className="ito flex flex-col justify-center items-center over">
+            <p className="small">Your Gateway to Palawan’s Hidden Wonders</p>
             <h1 className="flex text-center big">
               Discover. Share.
               <br />
