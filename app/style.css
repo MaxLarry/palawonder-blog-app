@@ -1,7 +1,11 @@
 
 
+.home-intro{
+    padding-top: var(--section-padding);
+    padding-bottom: 10vw;
+}
 
-header .container{
+.home-intro .container{
     /* height: 90vh; */
     display: flex;
     justify-content: center;
@@ -9,13 +13,20 @@ header .container{
 }
 
 
-header .container h1{
+/* .home-intro .container h1{
     font-family: "John-Regular", sans-serif;
     line-height: 0.8em;
+    font-size: 8.5vw;
     margin-bottom: 2rem;
-}
+} */
 
-header .container p{
+/* @media screen  and (max-width: 720px){
+    .home-intro .container h1{
+        font-size: 3rem;
+    }
+} */
+
+.home-intro .container p{
     font-family: "Syne-Regular", sans-serif;
     margin-bottom: 2rem;
     text-align: center;

@@ -13,12 +13,21 @@
 
   --primary-text-color-light: #ffffff;
   --primary-text-color-light: #171717;
+
+  --section-padding: clamp(5em, 21vh, 12em);
 }
 
 .dark {
   --background: #000000;
   --foreground: #ededed;
 }
+
+/* @media screen and (width: 720px) {
+  :root {
+    --section-padding: 12vh;
+  }
+} */
+
 
 @font-face {
   font-family: Larry-Regular;
@@ -78,6 +87,11 @@ p a {
 p a:hover {
   opacity: 0.5;
   transform: translate(0, -2px);
+}
+h1.big {
+  font-size: clamp(60px, 7.5vw, 150px);
+  line-height: 0.8em;
+  font-family: "John-Regular", sans-serif;
 }
 h2 {
   font-size: clamp(26px, 2.6vw, 40px);

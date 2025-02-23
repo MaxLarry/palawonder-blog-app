@@ -6,11 +6,11 @@ import Hello from "./hello";
 export default function Home() {
   return (
     <>
-      <header className="section">
+      <header className="home-intro">
         <div className="container overflow-hidden">
           <div className="flex flex-col justify-center items-center over">
             <p>Your Gateway to Palawan’s Hidden Wonders</p>
-            <h1 className="flex text-center text-9xl">
+            <h1 className="flex text-center big">
               Discover. Share.
               <br />
               Connect
