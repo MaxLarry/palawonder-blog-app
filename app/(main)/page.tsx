@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <header className="home-intro overflow-hidden">
-        <div className="container ">
+        <div className="container home-text-intro">
           <div className="ito flex flex-col justify-center items-center over">
             <p className="small">
               🏝️ Your Gateway to Palawan’s Hidden Wonders ☀️
@@ -25,11 +25,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="container">
+        <div className="container video-container">
           <div className="video-card">
-            <div className="lj_video_wrapper w-full flex justify-center">
-              <video className="h-full w-full rounded-3xl" preload="none" autoPlay loop>
-                <source src="https://cdn.prod.website-files.com/60db5e59f76ae577e9f50d42/63600c288b483e9c7398616b_reel-transcode.mp4" />
+            <div className="lj_video_wrapper">
+              <video preload="none" autoPlay loop>
+                <source src="https://youtu.be/bmHrdsNvsYY" />
               </video>
             </div>
             <div className="header-card-overlay"></div>

@@ -1,6 +1,9 @@
 .home-intro {
   padding-top: var(--section-padding);
   padding-bottom: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
 }
 
 .home-intro .container {
@@ -33,40 +36,55 @@
   text-align: center;
 }
 
-/* header .container {
-    padding: 90px 0;
-} */
-
+/*------------------Video intro----------------*/
 .header-card-overlay {
   z-index: 2;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.468),
-    rgba(194, 19, 19, 0.468)
+    rgba(4, 106, 86, 0.374)
   );
   opacity: 0.24;
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
 }
 
 .video-card {
-  transform-origin: 50% 100%;
-  color: #f3f6fa;
-  text-align: center;
   border-radius: 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   padding: 64px;
   display: flex;
   position: relative;
   overflow: hidden;
+}
+
+.home-intro .lj_video_wrapper {
+    z-index: 1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0%;
+}
+
+.lj_video_wrapper>video {
+    object-fit: cover;
+    z-index: -100;
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    inset: -100%;
+}
+
+.home-intro .video-container{
+    padding: 0 10vw ;
 }
