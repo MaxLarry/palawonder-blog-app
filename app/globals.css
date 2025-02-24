@@ -63,10 +63,18 @@
 ::-webkit-scrollbar {
   display: none;
 }
+/* Selection */
 ::selection {
-  background: rgb(2, 154, 160);
-  color: #000;
+  background-color: transparent;
+  color: rgb(2, 87, 90);
+  text-shadow: none;
 }
+::-moz-selection {
+  background-color: transparent;
+  color: rgb(2, 87, 90);
+  text-shadow: none;
+}
+
 .social-ico {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -98,7 +106,7 @@ h2 {
   font-size: clamp(26px, 2.6vw, 40px);
 }
 h2 {
-  font-family: "Larry-Bold", Helvetica, sans-serif;
+  font-family: "John-Regular", sans-serif;
   line-height: 1.15;
 }
 p {
@@ -539,6 +547,23 @@ main#home .header-image.mobile {
   padding: 4px 15px;
   font-family: "Larry-SemiBold", sans-serif;
   font-size: clamp(10px, 1vw, 13px);
+  line-height: 1;
+  transition: all 0.45s ease-in-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.button.big {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 10px 15px;
+  font-family: "Larry-SemiBold", sans-serif;
+  font-size: clamp(11px, 2vw, 15px);
   line-height: 1;
   transition: all 0.45s ease-in-out;
   display: flex;
