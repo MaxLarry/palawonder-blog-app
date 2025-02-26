@@ -209,7 +209,13 @@ body {
   position: relative;
   border-radius: 100%;
 }
-
+.vertical-stripe {
+  height: clamp(90px, 8vw, 200px);
+  width: 1px;
+  opacity: 0.6;
+  position: relative;
+  border-radius: 100%;
+}
 .sub-wrap {
   width: 50%;
   position: relative;
