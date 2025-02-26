@@ -1,6 +1,5 @@
 .home-intro {
   padding-top: var(--section-padding);
-  padding-bottom: 10vw;
   display: flex;
   flex-direction: column;
   gap: 10vw;
@@ -65,46 +64,85 @@
 }
 
 .home-intro .lj_video_wrapper {
-    z-index: 1;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0%;
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
 }
 
-.lj_video_wrapper>video {
-    object-fit: cover;
-    z-index: -100;
-    background-position: 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    position: absolute;
-    inset: -100%;
+.lj_video_wrapper > video {
+  object-fit: cover;
+  z-index: -100;
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  inset: -100%;
 }
 
-.home-intro .video-container{
-    padding: 0 10vw ;
+.home-intro .video-container {
+  padding: 0 10vw;
 }
-
 
 /*------------------Photo Dayon Kamo----------------*/
 
-.section-photo-wrapper{
+.section-photo-wrapper {
   width: 100%;
   height: 200vh;
 }
 
-.section .photo-wrapper-sticky{
+.section .photo-wrapper-sticky {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:100vh;
+  height: 100vh;
   position: sticky;
   top: 0;
   overflow: hidden;
+}
+
+.section .content-wrap {
+  z-index: 0;
+  grid-row-gap: 128px;
+  transform-origin: 0%;
+  text-align: center;
+  flex-direction: column;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  max-width: 600px;
+  height: 100%;
+  padding: 0 64px;
+  display: flex;
+  position: relative;
+}
+
+.photo-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.content-wrap.photo {
+  border-radius: 32px;
+  height: 80%;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.content-wrap.photo.right {
+  z-index: 1;
+  transform-origin: 100% 100%;
+}
+
+.content-wrap.photo.left {
+  z-index: 2;
+  transform-origin: 100% 100%;
 }
