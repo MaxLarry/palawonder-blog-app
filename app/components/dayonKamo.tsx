@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
@@ -6,8 +6,7 @@ import Elnido from "@/app/img/Elnido.jpg";
 import SanVicente from "@/app/img/San-Vicente.jpg";
 import Link from "next/link";
 import gsap from "gsap";
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,14 +15,13 @@ const dayonKamo = () => {
   const rightImageRef = useRef(null);
   const leftImageRef = useRef(null);
 
-
-  useEffect (()=>{
+  useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         start: "+=90px bottom",
         end: "bottom center",
-        markers:true,
+        // markers: true,
         scrub: true,
       },
       stagger: 0.1,
@@ -32,18 +30,15 @@ const dayonKamo = () => {
     // Image animations
     tl.fromTo(
       rightImageRef.current,
-      { x: -550, rotate: 0, y:0 },
-      { x: 0, duration: 3, rotate: 5 }
+      { xPercent: -100, rotate: 0, transformOrigin: "center bottom" },
+      { xPercent: 0, duration: 3, rotate: 5 }
     ).fromTo(
       leftImageRef.current,
-      { x: 550, rotate: 0, y:0 },
-      { x: 0, duration: 3, rotate: -5 },
+      { xPercent: 100, rotate: 0, transformOrigin: "center bottom" },
+      { xPercent: 0, duration: 3, rotate: -5 },
       "<"
     );
-
-
-  },[])
-
+  }, []);
 
   return (
     <section className="section section-photo-wrapper">
