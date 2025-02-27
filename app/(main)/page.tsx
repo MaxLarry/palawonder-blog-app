@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hello from "./hello";
 import DayonKamo from "../components/dayonKamo";
+import TrendBlogs from "../components/trendBlogs";
 import Link from "next/link";
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
         </div>
       </header>
       <DayonKamo/>
+      <TrendBlogs/>
     </>
   );
 }

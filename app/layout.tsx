@@ -4,6 +4,7 @@ import Header from "./components/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "./provider";
+import SmoothScroll from "./components/smoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <SmoothScroll/>
         <Provider>
           {children}
         </Provider>

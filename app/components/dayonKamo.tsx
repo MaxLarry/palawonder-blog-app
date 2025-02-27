@@ -23,6 +23,7 @@ const dayonKamo = () => {
         end: "bottom center",
         // markers: true,
         scrub: true,
+        
       },
       stagger: 0.1,
     });
