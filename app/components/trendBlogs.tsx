@@ -1,5 +1,13 @@
 import React from 'react'
 
+
+type Blog = {
+  id:number;
+  title: string;
+  author: string;
+}
+
+
 const TrendBlogs = () => {
   return (
     <section className="section section-trend-blogs">
@@ -8,7 +16,9 @@ const TrendBlogs = () => {
             <p className=' ml-[5vw]'>Trending Blogs</p>
             <div className="stripe dark:bg-white bg-gray-800"></div>
         </div>
-        <div></div>
+        <div className=''>
+
+        </div>
      </div>
     </section>
   )

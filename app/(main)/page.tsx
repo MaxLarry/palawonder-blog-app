@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <header className="home-intro overflow-hidden">
+      <header className="home-intro section overflow-hidden">
         <div className="container home-text-intro">
           <div className="ito flex flex-col justify-center items-center over">
             <p className="small">

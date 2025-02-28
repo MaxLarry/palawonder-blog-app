@@ -245,7 +245,6 @@ body {
   float: left;
   width: 100%;
   position: relative;
-  padding-top: 10vw;
   padding-bottom: 10vw;
 }
 
@@ -414,9 +413,13 @@ main#home .header-image.mobile {
 
 /* ------------------------- Footer -------------------------------------------------- */
 
+.prefooter {
+  padding-top: 10vw;
+}
+
 .footer {
-  padding-top: 0;
   padding-bottom: 3vw;
+  padding-top: 0vw;
 }
 
 .footer .stripe {
