@@ -1,8 +1,7 @@
-'use client'
+"use client";
 
 import React from "react";
 import Image from "next/image";
-
 
 type Blog = {
   id: number;
@@ -49,14 +48,15 @@ const TrendBlogs = () => {
     <section className="section section-trend-blogs">
       <div className="container">
         <div className="mb-1">
-          <p className=" ml-0 lg:ml-[3vw] mb-1 lg:mb-5 md:mb-3">Trending Blogs</p>
+          <p className=" ml-0 lg:ml-[3vw] mb-1 lg:mb-5 md:mb-3">
+            Trending Blogs
+          </p>
           <div className="stripe dark:bg-white bg-gray-800"></div>
         </div>
         <div className="mt-10">
           <div className="slides h-[80vh] flex justify-center items-center">
-            <div className="bg-black h-80 w-20">
-
-            </div>
+            <div className="bg-black h-80 w-20"></div>
+            <div className="bg-black h-80 w-20"></div>
           </div>
         </div>
       </div>

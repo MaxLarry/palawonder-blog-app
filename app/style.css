@@ -155,6 +155,23 @@
 
 
 /*------------------Trending Blogs----------------*/
+.section-carousel {
+  width: 100%;
+  height: 200vh;
+}
+
+.section .carousel-sticky {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
 
 .section-trend-blogs .container p{
   
