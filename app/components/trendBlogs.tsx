@@ -1,62 +1,132 @@
 "use client";
 
-import React from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-type Blog = {
-  id: number;
-  title: string;
-  subtitle: string;
-  blog: string;
-  author: string;
-  date: string;
-  image: string;
-  likes: number;
-  views: number;
-  category: string[]; // Array of category names
-};
+gsap.registerPlugin(ScrollTrigger);
 
-const trendingBlogs: Blog[] = [
-  {
-    id: 1,
-    title: "Exploring the Hidden Gems of Palawan",
-    subtitle: "Discover breathtaking spots beyond the usual tourist paths.",
-    blog: "Palawan is known for its crystal-clear waters and stunning landscapes, but beyond the famous destinations like El Nido and Coron, there are hidden gems waiting to be explored...",
-    author: "John Doe",
-    date: "2025-02-28",
-    image: "https://example.com/palawan-thumbnail.jpg",
-    likes: 300,
-    views: 1200,
-    category: ["Travel", "Adventure", "Philippines"],
-  },
-  {
-    id: 2,
-    title: "The Ultimate Guide to Island Hopping in El Nido",
-    subtitle: "A must-read guide for first-time travelers to El Nido.",
-    blog: "Island hopping in El Nido is an experience like no other. From the stunning Big Lagoon to the hidden beaches of Cadlao, this guide covers everything you need to know...",
-    author: "Jane Smith",
-    date: "2025-02-27",
-    image: "https://example.com/elnido-thumbnail.jpg",
-    likes: 250,
-    views: 980,
-    category: ["Travel", "Beach", "El Nido"],
-  },
-];
+import SanVicente from "@/app/img/San-Vicente.jpg";
 
 const TrendBlogs = () => {
+  const slidesContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!slidesContainerRef.current) return;
+    
+    const slidesContainer = slidesContainerRef.current;
+    const slides = Array.from(slidesContainer.querySelectorAll<HTMLDivElement>('.slide'));
+    
+    if (slides.length === 0) return;
+    
+    const totalWidth = slides.length * (slides[0].offsetWidth + 20) - window.innerWidth;
+    
+    // Set the first slide in the middle initially
+    gsap.set(slidesContainer, {
+      x: (window.innerWidth / 2) - (slides[0].offsetWidth / 2)
+    });
+    
+    // Create the horizontal scroll animation
+    gsap.to(slidesContainer, {
+      x: -totalWidth + (window.innerWidth / 2) - (slides[0].offsetWidth / 2),
+      ease: "none",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+        pin: ".carousel-sticky",
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      }
+    });
+    
+    // Update the center slide based on scroll position
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const slideIndex = Math.round(progress * (slides.length - 1));
+        
+        // Remove active class from all slides
+        slides.forEach((slide: HTMLDivElement) => slide.classList.remove('active'));
+        
+        // Add active class to the center slide
+        if (slides[slideIndex]) {
+          slides[slideIndex].classList.add('active');
+        }
+      }
+    });
+    
+    return () => {
+      // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="section section-trend-blogs">
-      <div className="container">
+    <section ref={sectionRef} className="section section-trend-blogs">
+      <div className="container carousel-sticky">
         <div className="mb-1">
-          <p className=" ml-0 lg:ml-[3vw] mb-1 lg:mb-5 md:mb-3">
+          <p className="ml-0 lg:ml-[3vw] mb-1 lg:mb-5 md:mb-3">
             Trending Blogs
           </p>
           <div className="stripe dark:bg-white bg-gray-800"></div>
         </div>
-        <div className="mt-10">
-          <div className="slides h-[80vh] flex justify-center items-center">
-            <div className="bg-black h-80 w-20"></div>
-            <div className="bg-black h-80 w-20"></div>
+        <div className="mt-10 overflow-hidden">
+          <div 
+            ref={slidesContainerRef} 
+            className="slides h-[70vh] flex justify-start items-center gap-5"
+          >
+            <div className="slide h-full w-96 flex flex-shrink-0 transition-all duration-300">
+              <Image
+                className="object-cover"
+                src={SanVicente}
+                width={0}
+                height={0}
+                alt="San Vicente"
+              />
+            </div>
+            <div className="slide h-full w-96 flex flex-shrink-0 transition-all duration-300">
+              <Image
+                className="object-cover"
+                src={SanVicente}
+                width={0}
+                height={0}
+                alt="San Vicente"
+              />
+            </div>
+            <div className="slide h-full w-96 flex flex-shrink-0 transition-all duration-300">
+              <Image
+                className="object-cover"
+                src={SanVicente}
+                width={0}
+                height={0}
+                alt="San Vicente"
+              />
+            </div>
+            <div className="slide h-full w-96 flex flex-shrink-0 transition-all duration-300">
+              <Image
+                className="object-cover"
+                src={SanVicente}
+                width={0}
+                height={0}
+                alt="San Vicente"
+              />
+            </div>
+            <div className="slide h-full w-96 flex flex-shrink-0 transition-all duration-300">
+              <Image
+                className="object-cover"
+                src={SanVicente}
+                width={0}
+                height={0}
+                alt="San Vicente"
+              />
+            </div>
           </div>
         </div>
       </div>
