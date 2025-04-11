@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Hello from "./hello";
-import DayonKamo from "../components/dayonKamo";
-import TrendBlogs from "../components/trendBlogs";
+import DayonKamo from "@/src/components/dayonKamo";
+import TrendBlogs from "@/src/components/trendBlogs";
 import Link from "next/link";
+import Quotes from "@/src/components/quotes";
+import Showcase from "@/src/components/showcase";
 
 export default function Home() {
   return (
@@ -40,6 +42,8 @@ export default function Home() {
       </header>
       <DayonKamo/>
       <TrendBlogs/>
+      <Showcase/>
+      <Quotes/>
     </>
   );
 }

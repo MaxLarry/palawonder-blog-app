@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Elnido from "@/app/img/Elnido.jpg";
-import SanVicente from "@/app/img/San-Vicente.jpg";
+import Elnido from "@/src/img/Elnido.jpg";
+import SanVicente from "@/src/img/San-Vicente.jpg";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -25,7 +25,8 @@ const dayonKamo = () => {
         scrub: true,
         
       },
-      stagger: 0.1,
+        ease: "power1.inOut",
+        duration: 0.2,
     });
 
     // Image animations
@@ -57,7 +58,7 @@ const dayonKamo = () => {
         </div>
         <div className="content-wrap ">
           <div className="flex flex-col justify-center items-center">
-            <h1>Dayon Kamo</h1>
+            <h1 className="mb-9">Dayon Kamo</h1>
             <div className="vertical-stripe  dark:bg-white/30 bg-gray-800"></div>
             <p className="small mt-[2vw]">
               A Place that you can find the true meaning of peace.

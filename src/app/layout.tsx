@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Footer from "@/src/components/footer";
+import Header from "@/src/components/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Provider } from "./provider";
-import SmoothScroll from "./components/smoothScroll";
+import SmoothScroll from "@/src/components/smoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body>
         <SmoothScroll/>
         <Provider>
