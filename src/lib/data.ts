@@ -16,7 +16,7 @@ type Blog = {
   postedBy: {
     userId: string;
     username: string;
-    profilePic: string ;
+    profilePic: string;
   };
 };
 
@@ -32,10 +32,11 @@ export const trendingBlogs: Blog[] = [
     likes: 3000,
     views: 1200,
     category: ["Travel", "Adventure", "Philippines"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
   {
@@ -49,10 +50,11 @@ export const trendingBlogs: Blog[] = [
     likes: 2502323,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
   {
@@ -66,13 +68,14 @@ export const trendingBlogs: Blog[] = [
     likes: 250,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
-  
+
   {
     id: 2,
     title: "The Ultimate Guide to Island Hopping in El Nido",
@@ -84,13 +87,14 @@ export const trendingBlogs: Blog[] = [
     likes: 2509,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
-  
+
   {
     id: 2,
     title: "The Ultimate Guide to Island Hopping in El Nido",
@@ -102,13 +106,14 @@ export const trendingBlogs: Blog[] = [
     likes: 2503,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
-  
+
   {
     id: 2,
     title: "The Ultimate Guide to Island Hopping in El Nido",
@@ -120,10 +125,11 @@ export const trendingBlogs: Blog[] = [
     likes: 250332,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
   {
@@ -137,10 +143,11 @@ export const trendingBlogs: Blog[] = [
     likes: 250,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
   {
@@ -154,10 +161,11 @@ export const trendingBlogs: Blog[] = [
     likes: 250,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
   {
@@ -171,11 +179,24 @@ export const trendingBlogs: Blog[] = [
     likes: 250,
     views: 980,
     category: ["Travel", "Beach", "El Nido"],
-    postedBy:{
+    postedBy: {
       userId: "1209102091209102",
       username: "Larry_1920",
-      profilePic:"https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
+      profilePic:
+        "https://res.cloudinary.com/dyyglc78v/image/upload/v1728993435/adminprofile/user-2024-10-15T11-57-13.718Z.jpg",
     },
   },
-  
+];
+
+export const showcaseItem = [
+  Elnido,
+  SanVicente,
+  Elnido,
+  SanVicente,
+  Elnido,
+  SanVicente,
+  Elnido,
+  SanVicente,
+  Elnido,
+  SanVicente,
 ];
