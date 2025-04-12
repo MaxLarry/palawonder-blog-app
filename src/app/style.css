@@ -291,3 +291,15 @@
   position: absolute;
   inset: 0%;
 }
+
+
+
+
+/*----------Destinatiom--------------*/
+
+.destination-head{
+  padding-top: var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
+}

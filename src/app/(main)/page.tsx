@@ -5,6 +5,7 @@ import TrendBlogs from "@/src/components/trendBlogs";
 import Link from "next/link";
 import Quotes from "@/src/components/quotes";
 import Showcase from "@/src/components/showcase";
+import { Camera } from "lucide-react";
 
 export default function Home() {
   return (
@@ -37,13 +38,14 @@ export default function Home() {
               </video>
             </div>
             <div className="header-card-overlay"></div>
+            <div className="absolute flex gap-3 items-center justify-center bottom-0 mb-4"><Camera/><p className="medium">Our Awesome Planet</p></div>
           </div>
         </div>
       </header>
-      <DayonKamo/>
-      <TrendBlogs/>
-      <Showcase/>
-      <Quotes/>
+      <DayonKamo />
+      <TrendBlogs />
+      <Showcase />
+      <Quotes />
     </>
   );
 }

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import Palawonder from "@/public/Palawonder.svg";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,7 +32,7 @@ const Footer = () => {
               ></Image>
             </div>
             <h2 className="">START YOUR JOURNEY NOW!</h2>
-            <p className="m-0">Don't waste your time!</p>
+            <p className="m-0">Write your Story!</p>
           </div>
 
           <div className="sub-wrap">
@@ -42,16 +43,22 @@ const Footer = () => {
                 </p>
 
                 <p>
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </p>
                 <p>
-                  <a href="#">Explore</a>
+                <Link href="/explore">
+              Explore
+            </Link>
                 </p>
                 <p>
-                  <a href="#">Destination</a>
+                <Link href="/destination">
+              Destination
+            </Link>
                 </p>
                 <p>
-                  <a href="#">Community</a>
+                <Link href="/community">
+              Community
+            </Link>
                 </p>
               </li>
               <li>
@@ -98,7 +105,7 @@ const Footer = () => {
           <div className="footer-wrap">
             <div className="credits">
               <p className="small">
-                <a href="https:/larry-portry.vercel.app" target="_blanks">
+                <a href="#">
                   {currentYear} &copy; Palawonder
                 </a>
               </p>
@@ -110,10 +117,10 @@ const Footer = () => {
             </div>
             <div className="legal">
               <p className="small">
-                <a href="https://onenil.com/privacy-policy">Privacy Policy</a>
+                <a href="#">Privacy Policy</a>
               </p>
               <p className="small">
-                <a href="https://onenil.com/terms-and-conditions">
+                <a href="#">
                   Terms and Conditions
                 </a>
               </p>

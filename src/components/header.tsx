@@ -14,22 +14,24 @@ const Header = () => {
       </div>
       <div className="container logo-container justify-between flex cursor-pointer">
         <div className="flex justify-center items-center select-none gap-9">
-          <Image
-            src={Palawonder}
-            width={40}
-            height={60}
-            alt="palawonder"
-          ></Image>
-          {/* <div className='flex items-center'><p className='m-0'>Palawonder</p></div> */}
+          <Link href="/">
+            <Image
+              src={Palawonder}
+              width={40}
+              height={60}
+              alt="palawonder"
+            ></Image>
+          </Link>
+
           <ul className="nav-links">
             <li className="btn">
-              <a href="#">Explore</a>
+              <Link href="/explore">Explore</Link>
             </li>
             <li className="btn">
-              <a href="#">Destination</a>
+              <Link href="/destination">Destination</Link>
             </li>
             <li className="btn">
-              <a href="#">Community</a>
+              <Link href="/community">Community</Link>
             </li>
           </ul>
         </div>
@@ -41,11 +43,7 @@ const Header = () => {
             Sign up
           </Link>
 
-          <div
-            className=""
-            aria-label="menu"
-            role="button"
-          >
+          <div className="" aria-label="menu" role="button">
             <div className="button mobile-button prim ">
               <div className="mobile-button-text">Menu</div>
               <div className="mobile-button-text">Close</div>
