@@ -197,4 +197,6 @@ export const showcaseItem = [
   SanVicente,
   Elnido,
   SanVicente,
+  Elnido,
+  SanVicente,
 ];

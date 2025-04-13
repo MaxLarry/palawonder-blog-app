@@ -10,14 +10,16 @@
 :root {
 
   --primary-text-color-light: #ffffff;
-  --primary-text-color-light: #171717;
+  /* --primary-text-color-light: #171717; */
 
   --section-padding: clamp(5em, 21vh, 12em);
+
+  
 }
 
 .dark {
-  --background: #111111;
-  --foreground: #ededed;
+  --background: 0 0% 7%;
+  --foreground: 0 0% 93%;
 }
 
 /* @media screen and (width: 720px) {

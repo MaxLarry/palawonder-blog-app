@@ -59,7 +59,7 @@ const Showcase = () => {
   }, [mounted]);
 
   return (
-    <div className="section section-showcase">
+    <div className="section section-showcase overflow-hidden">
       <div className="flex flex-col gap-3">
         <div ref={leftShowcase} className="flex gap-3 left justify-end">
           {showcaseItem.map((img, index) => (
