@@ -34,17 +34,30 @@ const page = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="rounded-xl dark:bg-zinc-900 text-xs md:text-sm lg:text-base bg-slate-50"
               />
-              <Input
-                id="password"
-                name="password"
-                type={showPassword ? "text" : "password"}
-                required
-                autoComplete="current-password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="rounded-xl dark:bg-zinc-900 text-xs md:text-sm lg:text-base bg-slate-50"
-              />
+              <div className="relative">
+                <Input
+                  id="password"
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  required
+                  autoComplete="current-password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="rounded-xl dark:bg-zinc-900 text-xs md:text-sm lg:text-base bg-slate-50"
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3"
+                >
+                  {showPassword ? (
+                    <Eye className="h-5 w-5 text-zinc-700" />
+                  ) : (
+                    <EyeOff className="h-5 w-5 text-zinc-700" />
+                  )}
+                </button>
+              </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <Checkbox id="remember" className="h-4 w-4 border-muted" />
@@ -71,7 +84,7 @@ const page = () => {
               </span>
             </div>
           </div>
-          <div className="justify-center">
+          <div className="justify-center pb-9">
             <Button className="w-full rounded-xl">
               <div className="flex justify-center gap-3">
                 <Image
