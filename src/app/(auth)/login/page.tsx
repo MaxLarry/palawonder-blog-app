@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import GoogleSvg from "@/src/svg/google.svg";
 import Image from "next/image";
 import { Checkbox } from "@/components/ui/checkbox";
+import {useAuthGoogle} from '@/src/hooks/useAuth'
+import { emailLogin } from "./action";
 
 const page = () => {
   const [email, setEmail] = useState("");
@@ -16,6 +18,9 @@ const page = () => {
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+
+  const { signInWithGoogle } = useAuthGoogle()
+
   return (
     <div className="flex flex-col justify-center min-h-full py-12 mt-auto mb-auto px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md ">
@@ -70,7 +75,7 @@ const page = () => {
                 </a>
               </div>
             </form>
-            <Button className="w-full rounded-xl mt-5">
+            <Button formAction={emailLogin} className="w-full rounded-xl mt-5">
               <p className="small">Sign in</p>
             </Button>
           </div>
@@ -85,7 +90,7 @@ const page = () => {
             </div>
           </div>
           <div className="justify-center pb-9">
-            <Button className="w-full rounded-xl">
+            <Button className="w-full rounded-xl" onClick={signInWithGoogle}>
               <div className="flex justify-center gap-3">
                 <Image
                   src={GoogleSvg}
